@@ -51,7 +51,7 @@ jobs:
           hugo --minify -d ./public --baseURL https://blog.pgscom.es/
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hugo-build
           path: ./public
@@ -64,7 +64,7 @@ jobs:
       deployments: write
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: hugo-build
           path: ./public
