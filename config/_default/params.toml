@@ -125,13 +125,13 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+   apiKey = "AIzaSyCwtQCj7h650SPg6U5Z21PzRFMWPfbSsGs"
+   authDomain = "pgscom-blog.firebaseapp.com"
+   projectId = "pgscom-blog"
+   storageBucket = "pgscom-blog.firebasestorage.app"
+   messagingSenderId = "299173094119"
+   appId = "1:299173094119:web:3376e06ea157e02848b842"
+   measurementId = "G-04SH7XKRHE"
 
 [fathomAnalytics]
   # site = "ABC12345"
