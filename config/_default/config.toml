@@ -1,0 +1,4 @@
+# config/_default/config.toml
+
+# version 4
+googleAnalytics = "G-6WFV9ZP1BJ"
