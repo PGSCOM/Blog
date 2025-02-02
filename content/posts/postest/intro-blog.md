@@ -10,7 +10,12 @@ tags:
 
 # Hola!
 
-Este blog está basado en [HUGO](https://gohugo.io/), un framework para páginas web súper rápido que normalmente se usa para blogs, porque compila bastante rápido incluso teniendo un montón de publicaciones. 
+Este blog está basado en [HUGO](https://gohugo.io/), un framework para páginas web súper rápido que normalmente se usa para blogs, porque compila bastante rápido incluso teniendo un montón de publicaciones. ([Código fuente](https://github.com/PGSCOM/Blog))
+
+## ¿Qué voy a escribir aquí?
+Aquí voy a hablar de mi experiencia personal haciendo cosas pequeñas y algunas más grandes. Que pueden ser de tecnología, VFX y puede que alguna cosa más.
+
+El blog servirá cómo portfolio para que cualquier persona pueda ver mi trabajo. 
 
 ## Por qué no seguir en Blogger?
 - Blogger ya no recibe más actualizaciones 
@@ -34,9 +39,4 @@ Matemáticas:
 ```latex
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 ```
-Y muchas cosas más, pero no me quiero extender mucho en esto.
-
-## ¿Qué voy a escribir aquí?
-Aquí voy a hablar de mi experiencia personal haciendo cosas pequeñas y algunas más grandes. Que pueden ser de tecnología, VFX y puede que alguna cosa más.
-
-El blog servirá cómo portfolio para que cualquier persona pueda ver mi trabajo. 
+Y muchas cosas más. 
