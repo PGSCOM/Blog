@@ -1,5 +1,6 @@
 ---
 title: 'Bienvenidos a mi nuevo blog :D'
+description: 'Hola!'
 date: '2025-02-02T12:31:55Z'
 draft: false
 tags: 
