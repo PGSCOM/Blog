@@ -1,8 +1,4 @@
-<!-- En tu archivo de plantilla (ej. layouts/partials/head.html) -->
-<head>
-    <!-- ... otras metaetiquetas ... -->
-  
-    {{/* Generación de la imagen OpenGraph */}}
+{{/* Generación de la imagen OpenGraph */}}
     {{ $ogImage := resources.Get "opengraph.png" }}
   
     {{ if $ogImage }}
@@ -27,4 +23,3 @@
       <meta property="og:image:width" content="1200">
       <meta property="og:image:height" content="630">
     {{ end }}
-</head>
