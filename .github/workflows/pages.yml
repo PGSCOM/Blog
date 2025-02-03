@@ -77,3 +77,27 @@ jobs:
           # Despliega la carpeta generada; reemplaza "your_project_name" con el nombre real de tu proyecto en Cloudflare Pages
           command: pages deploy ./public --project-name=blog
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post deployment status to GitHub
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: deployment } = await github.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              required_contexts: [],
+              environment: 'production',
+              transient_environment: false,
+              auto_merge: false
+            });
+
+            await github.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.id,
+              state: 'success',
+              log_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              description: 'Deployment to Cloudflare Pages successful',
+              environment_url: 'https://blog.pgscom.es/'
+            });
