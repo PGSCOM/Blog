@@ -1,5 +1,5 @@
 {{ $filters := slice
-	(images.Text "mpldr" (dict "color" "#000" "size" 40 "x" 112 "y" 38 "font" (resources.Get "opengraph-font.ttf")))
+	(images.Text "PGSCOM" (dict "color" "#000" "size" 40 "x" 133 "y" 38 "font" (resources.Get "hubotsans-black.ttf")))
 }}
 {{ $charsPerLine := 30 }}
 {{ $count := math.Add (len (seq 0 $charsPerLine (strings.CountRunes .Title))) -1 }}
@@ -42,7 +42,7 @@
 			"size" 60 
 			"x" 32 
 			"y" $y 
-			"font" (resources.Get "opengraph-font.ttf")
+			"font" (resources.Get "hubotsans-medium.ttf")
 		)
 	)
 	}}
