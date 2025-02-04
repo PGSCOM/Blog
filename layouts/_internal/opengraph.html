@@ -1,5 +1,5 @@
 {{ $filters := slice
-	(images.Text "PGSCOM" (dict "color" "#000" "size" 40 "x" 133 "y" 38 "font" (resources.Get "hubotsans-black.ttf")))
+	(images.Text "PGSCOM" (dict "color" "#000" "size" 40 "x" 133 "y" 38 "font" (resources.Get "HubotSansCondensed-SemiBold.ttf")))
 }}
 {{ $charsPerLine := 30 }}
 {{ $count := math.Add (len (seq 0 $charsPerLine (strings.CountRunes .Title))) -1 }}
