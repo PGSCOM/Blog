@@ -1,0 +1,66 @@
+{{ $filters := slice
+	(images.Text "mpldr" (dict "color" "#000" "size" 40 "x" 112 "y" 38 "font" (resources.Get "opengraph-font.ttf")))
+}}
+{{ $charsPerLine := 30 }}
+{{ $count := math.Add (len (seq 0 $charsPerLine (strings.CountRunes .Title))) -1 }}
+{{ $i := 0 }}
+{{ $title := (safeHTML .Title) }}
+{{ $words := strings.Split $title " " }}
+{{ $word := 0 }}
+{{ $line := "" }}
+{{ range $words }}
+	{{ $word = math.Add $word 1 }}
+	{{ $potentialLine := printf "%s %s" $line . }}
+	<!--
+	of course CountRunes counts all runes that are not spaces, why would I want
+	to know how many spaces there are?! And since these are templates, addition
+	is only possible through a function. You see why I called it functional
+	earlier?
+	-->
+	{{ $length := math.Add 
+		(strings.CountRunes $potentialLine) 
+		(strings.Count " " $potentialLine)
+	}}
+	<!-- if the word fits onto the line without exceeding our limit -->
+	{{ if (le $length $charsPerLine) }}
+		{{ $line = $potentialLine }}
+		<!-- and is not the overall last word -->
+		{{ if (ne $word (len $words)) }}
+			<!-- then continue with the next word -->
+			{{ continue }}
+		{{ end }}
+	{{ end }}
+
+	<!-- move up by the number of lines we have and back down based on how many lines we have in total -->
+	{{ $y := math.Add ( math.Add 522 ( math.Mul $count -64 ) ) (math.Mul $i 64) }}
+	{{ $i = math.Add $i 1 }}
+	{{ $filters = $filters | append
+	(images.Text
+		$line
+		(dict 
+			"color" "#000"
+			"size" 60 
+			"x" 32 
+			"y" $y 
+			"font" (resources.Get "opengraph-font.ttf")
+		)
+	)
+	}}
+	<!-- remember: we still have a word left over that didn't fit on the line -->
+	{{ $line = . }}
+{{end}}
+{{ with resources.Get "opengraph.png" | images.Filter $filters }}
+<meta property="og:url" content="{{ $.Page.Permalink }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ $.Page.Title }}">
+<meta property="og:description" content="{{ $.Page.Description }}">
+<meta property="og:image" content="{{ .Permalink }}">
+<meta name="fediverse:creator" content="@mpldr@fosstodon.org">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="moritz.sh">
+<meta property="twitter:url" content="{{ $.Page.Permalink }}">
+<meta name="twitter:title" content="{{ $.Page.Title }}">
+<meta name="twitter:description" content="{{ $.Page.Description }}">
+<meta name="twitter:image" content="{{ .Permalink }}">
+<meta name="fediverse:creator" content="@mpldr@fosstodon.org" />
+{{ end }}
