@@ -1,25 +1,106 @@
 {{/* Generación de la imagen OpenGraph */}}
-    {{ $ogImage := resources.Get "opengraph.png" }}
+{{ $ogImage := resources.Get "opengraph.png" }}
   
-    {{ if $ogImage }}
-      {{ $filters := slice (
+{{ if $ogImage }}
+    {{/* Filtros iniciales con texto estático */}}
+    {{ $filters := slice (
         images.Text "PGSCOM" (dict 
-          "color" "#000" 
-          "size" 40 
-          "x" 112 
-          "y" 38 
-          "font" (resources.Get "opengraph-font.ttf")
+            "color" "#000" 
+            "size" 40 
+            "x" 112 
+            "y" 38 
+            "font" (resources.Get "opengraph-font.ttf")
         )
-      ) }}
+    ) }}
+
+    {{/* Lógica para el título dinámico */}}
+    {{ $charsPerLine := 30 }}
+    {{ $title := $.Page.Title | safeHTML }}
+    {{ $words := split $title " " }}
     
-      {{ $ogImageWithText := $ogImage | images.Filter $filters }}
-  
-      <meta property="og:image" content="{{ $ogImageWithText.RelPermalink }}">
-      <meta property="og:image:width" content="{{ $ogImageWithText.Width }}">
-      <meta property="og:image:height" content="{{ $ogImageWithText.Height }}">
-    {{ else }}
-      {{/* Imagen de respaldo en caso de no encontrar opengraph.png */}}
-      <meta property="og:image" content="/ruta/a/imagen-por-defecto.png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
+    {{ if gt (len $title) 0 }}
+        {{ $count := sub (len (seq 0 $charsPerLine (strings.CountRunes $title))) 1 }}
+        {{ $i := 0 }}
+        {{ $word := 0 }}
+        {{ $line := "" }}
+        
+        {{ range $words }}
+            {{ $word = add $word 1 }}
+            {{ $potentialLine := printf "%s %s" $line . }}
+            
+            {{/* Calcular longitud incluyendo espacios */}}
+            {{ $length := add 
+                (strings.CountRunes $potentialLine) 
+                (strings.Count " " $potentialLine)
+            }}
+            
+            {{ if le $length $charsPerLine }}
+                {{ $line = $potentialLine }}
+                {{ if ne $word (len $words) }}
+                    {{ continue }}
+                {{ end }}
+            {{ end }}
+
+            {{/* Calcular posición vertical */}}
+            {{ $y := add (add 522 (mul $count -64)) (mul $i 64) }}
+            {{ $i = add $i 1 }}
+            
+            {{/* Agregar línea como filtro */}}
+            {{ $filters = $filters | append 
+                (images.Text
+                    (trim $line)
+                    (dict 
+                        "color" "#000"
+                        "size" 60 
+                        "x" 32 
+                        "y" $y 
+                        "font" (resources.Get "opengraph-font.ttf")
+                    )
+                )
+            }}
+            {{ $line = . }}
+        {{ end }}
+
+        {{/* Agregar última línea si queda pendiente */}}
+        {{ if $line }}
+            {{ $y := add (add 522 (mul $count -64)) (mul $i 64) }}
+            {{ $filters = $filters | append 
+                (images.Text
+                    (trim $line)
+                    (dict 
+                        "color" "#000"
+                        "size" 60 
+                        "x" 32 
+                        "y" $y 
+                        "font" (resources.Get "opengraph-font.ttf")
+                    )
+                )
+            }}
+        {{ end }}
     {{ end }}
+
+    {{/* Aplicar filtros y obtener imagen final */}}
+    {{ $ogImageWithText := $ogImage | images.Filter $filters }}
+
+    {{/* Meta tags sociales */}}
+    <meta property="og:url" content="{{ $.Page.Permalink }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:title" content="{{ $.Page.Title }}">
+    {{ with $.Page.Params.description }}<meta property="og:description" content="{{ . }}">{{ end }}
+    <meta property="og:image" content="{{ $ogImageWithText.RelPermalink }}">
+    <meta property="og:image:width" content="{{ $ogImageWithText.Width }}">
+    <meta property="og:image:height" content="{{ $ogImageWithText.Height }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ replaceRE `^https?://([^/]+).*` `$1` .Site.BaseURL }}">
+    <meta property="twitter:url" content="{{ $.Page.Permalink }}">
+    <meta name="twitter:title" content="{{ $.Page.Title }}">
+    {{ with $.Page.Params.description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+    <meta name="twitter:image" content="{{ $ogImageWithText.RelPermalink }}">
+
+{{ else }}
+    {{/* Fallback para cuando no existe la imagen */}}
+    <meta property="og:image" content="/img/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+{{ end }}
