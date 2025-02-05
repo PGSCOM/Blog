@@ -10,7 +10,6 @@ on:
 # Se definen los permisos necesarios
 permissions:
   contents: read
-  deployments: write
 
 # Permite una concurrencia de despliegues para evitar solapamientos
 concurrency:
@@ -76,4 +75,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           # Despliega la carpeta generada; reemplaza "your_project_name" con el nombre real de tu proyecto en Cloudflare Pages
           command: pages deploy ./public --project-name=blog
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
