@@ -17,10 +17,7 @@
 	is only possible through a function. You see why I called it functional
 	earlier?
 	-->
-	{{ $length := math.Add 
-		(strings.CountRunes $potentialLine) 
-		(strings.Count " " $potentialLine)
-	}}
+	{{ $length := strings.CountRunes $potentialLine }}
 	<!-- if the word fits onto the line without exceeding our limit -->
 	{{ if (le $length $charsPerLine) }}
 		{{ $line = $potentialLine }}
