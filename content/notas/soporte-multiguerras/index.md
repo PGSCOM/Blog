@@ -33,6 +33,7 @@ Si tú teniendo un ordenador potente renderizas en esa plataforma, aunque no hay
     * Preferiblemente usa GPU porque es lo más óptimo y funciona mejor
     * El programa coge prioridad a lo que estamos renderizando ahora mismo. Nosotros renderizamos en GPU y si usas CPU no pasa nada, porque ganaremos los puntos equivalentes a tu potencia de CPU
 4. Darle a Save & Start y empezará a renderizar
+
    ![Interfaz Sheepit](image.png)
 
 #### Progreso
@@ -46,5 +47,5 @@ Si quieres ver el progreso de lo que estás renderizando puedes verlo en [https:
 Si quieres salir en los créditos tienes que renderizar más de 5 frames.
 
 Cuando lo hagas, mándame una captura de pantalla de la interfaz a uno de estos metodos de contacto:
-* [Correo](mailto:contacto@pgscom.es)
-* [Instagram](https://www.instagram.com/multiguerras_team/)
+* [Correo](mailto:contacto@pgscom.es) (contacto@pgscom.es)
+* [Instagram](https://www.instagram.com/multiguerras_team/) (@multiguerras_team)
