@@ -44,7 +44,7 @@ Si quieres ver el progreso de lo que estás renderizando puedes verlo en [https:
 > En la web solo se puede ver si hay proyectos y el estado de esos proyectos.
 
 ### ¿Cómo puedo salir en los créditos?
-Si quieres salir en los créditos tienes que renderizar más de 5 frames.
+Si quieres salir en los créditos tienes que renderizar más de **5 frames**.
 
 Cuando lo hagas, mándame una captura de pantalla de la interfaz a uno de estos metodos de contacto:
 * [Correo](mailto:contacto@pgscom.es) (contacto@pgscom.es)
