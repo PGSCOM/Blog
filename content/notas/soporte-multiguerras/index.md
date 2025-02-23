@@ -45,6 +45,6 @@ Si quieres ver el progreso de lo que estás renderizando puedes verlo en [https:
 ### ¿Cómo puedo salir en los créditos?
 Si quieres salir en los créditos tienes que renderizar +10 frames.
 
-Cuando lo hagas, mándame una captura de pantalla a uno de estos metodos de contacto:
+Cuando lo hagas, mándame una captura de pantalla de la interfaz a uno de estos metodos de contacto:
 * [Correo](mailto:contacto@pgscom.es)
 * [Instagram](https://www.instagram.com/multiguerras_team/)
