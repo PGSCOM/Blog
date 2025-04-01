@@ -1,77 +1,47 @@
-# Workflow para construir y desplegar un sitio Hugo a Cloudflare Pages
-name: Blowfish Docs Deploy
+# Workflow for deploying static content to Cloudflare Pages
+name: Deploy static content to Cloudflare Pages
 
 on:
-  # Se ejecuta en cualquier push
-  push: {}
-  # Permite ejecutar manualmente este workflow desde la pestaña Actions
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["develop"]
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Se definen los permisos necesarios
+# Sets necessary permissions
 permissions:
   contents: read
 
-# Permite una concurrencia de despliegues para evitar solapamientos
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
-  cancel-in-progress: true
-
-# Configura el uso por defecto de bash
-defaults:
-  run:
-    shell: bash
+  cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.6.0
-        with:
-          hugo-version: 0.140.2
-          extended: true
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-
-      - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
-        with:
-          submodules: true  # Obtiene los submódulos (por ejemplo, temas de Hugo)
-          fetch-depth: 0    # Obtiene todo el historial de Git
-
-      - name: Build with Hugo
-        env:
-          # Variables para la producción
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          # Genera el sitio en la carpeta ./public
-          hugo --minify -d ./public --baseURL https://blog.pgscom.es/
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: hugo-build
-          path: ./public
-
+  # Single deploy job since we're just deploying
   deploy:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    environment:
+      name: cloudflare-pages
+      # Use the URL from Cloudflare deployment
+      url: ${{ steps.cloudflare-deployment.outputs.url }}
     runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      contents: read
-      deployments: write
     steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # Create artifact for reference, without GitHub Pages dependency
+      - name: Archive website content
+        uses: actions/upload-artifact@v3
         with:
-          name: hugo-build
-          path: ./public
-
+          name: cloudflare-pages
+          path: '.'
+      
       - name: Deploy to Cloudflare Pages
+        id: cloudflare-deployment
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # Despliega la carpeta generada; reemplaza "your_project_name" con el nombre real de tu proyecto en Cloudflare Pages
-          command: pages deploy ./public --project-name=blog
+          # Usa el nombre del repositorio en lugar de "blog"
+          command: pages deploy ./public --project-name=${{ github.repository_name || github.event.repository.name }}
