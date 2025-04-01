@@ -44,4 +44,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           # Usa el nombre del repositorio en lugar de "blog"
-          command: pages deploy ./public --project-name=${{ github.repository_name || github.event.repository.name }}
+          command: pages deploy . --project-name=${{ github.repository_name || github.event.repository.name }}
