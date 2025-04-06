@@ -1,0 +1,11 @@
+/* Estilos personalizados para la barra de navegación superior */
+#menu-blur {
+    background: rgba(0, 247, 255, 0.1); /* Fondo semitransparente */
+    backdrop-filter: blur(10px);         /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    border-bottom: 1px solid rgba(0, 247, 255, 0.2); /* Borde inferior semitransparente */
+    
+    /* NOTA: El tema Blowfish ya controla la opacidad de #menu-blur 
+       con JavaScript para el efecto de fade-in al hacer scroll. 
+       No fuerces la opacidad aquí a menos que quieras deshabilitar ese efecto. */
+}
