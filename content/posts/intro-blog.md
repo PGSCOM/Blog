@@ -37,7 +37,8 @@ Podré publicar fragmentos de código:
 print(“Hola Mundo!”)
 ```
 Matemáticas:
-```latex
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-```
+
+{{< katex >}}
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)
+
 Y muchas cosas más. 

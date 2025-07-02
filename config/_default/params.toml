@@ -12,6 +12,9 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
+# Enable math rendering
+enableMath = true
+
 replyByEmail = false
 
 mainSections = ["posts"]
