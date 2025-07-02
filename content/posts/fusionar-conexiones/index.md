@@ -1,5 +1,5 @@
 ---
-title: 'Fusionar Conexiones'
+title: 'Fusionar varias conexiones de red para aumentar el ancho de banda'
 date: '2025-07-02T17:03:33Z'
 description: 'Fusionar conexiones de red para aumentar el ancho de banda.'
 draft: false
