@@ -4,7 +4,7 @@ Description: Es tu oportunidad de ayudar a que el proyecto avance más rápido
 Date: 2025-02-23T20:18:20+01:00
 sitemap_exclude: true
 cascade:
-  _build:
+  build:
     list: true
     render: true
   hidden: true
