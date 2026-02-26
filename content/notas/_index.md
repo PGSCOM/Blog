@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Notas Puntuales"
 layout: list
 headless: true
 ---

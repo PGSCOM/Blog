@@ -8,6 +8,7 @@ cascade:
     list: true
     render: true
   hidden: true
+headless: true
 Tags:
   - Multiguerras
 ---
