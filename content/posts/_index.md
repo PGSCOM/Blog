@@ -1,5 +1,5 @@
 ---
 title: "Posts"
 layout: list
-headless: true
+headless: false
 ---
