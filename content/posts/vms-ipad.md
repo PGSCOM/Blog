@@ -1,11 +1,11 @@
 ---
-title: 'UTM en iPad'
-date: '2025-07-02T17:03:33Z'
+title: 'Máquinas virtuales en iPad'
+date: '2026-02-27T10:02:32.298Z'
 description: 'Instalación de Linux en un iPad pro M5'
 draft: true
 tags:
     - 'iPad'
-    - 'Máquinas virtuales'
+    - 'VMs'
 ---
 
 Hola! Ahora tengo un iPad Pro. Y siempre he querido instalar UTM, al ser el iPad Pro M5, todos los modelos tienen 12GB de RAM, así que aún mejor (En el iPhone cualquier VM se me bloqueaba por la RAM)
@@ -13,6 +13,10 @@ Hola! Ahora tengo un iPad Pro. Y siempre he querido instalar UTM, al ser el iPad
 # ¿Qué es [UTM](https://getutm.app/)?
 UTM es una aplicación para Mac e iOS para ejecutar maquinas virtuales (Un VirtualBox pero optimizado para dipositivos Apple).
 Yo no tengo un Mac, así que solo diré mi experiencia con la versión de iOS.
+
+{{< github repo="utmapp/utm" showThumbnail=false >}}
+
+<br/>
 
 # Instalación de la VM
 
@@ -42,8 +46,21 @@ Para el entorno gráfico he elegido Xfce, porque quiero el sistema más ligero y
 
 Instalé Xfce con estos comandos:
 
-```Bash
+```bash
+sudo pacman -Syu
+sudo pacman -S xfce4 xfce4-goodies
+# Display Manager (Inicio automático):
+sudo pacman -S lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm
+# Reiniciar
+sudo reboot
+```
 
+Y si no quieres Display Manager, se puede iniciar el entorno con:
+
+```bash
+echo "exec startxfce4" >> ~/.xinitrc
+startx
 ```
 
 # Y ahora qué, ¿qué haré con ello?
