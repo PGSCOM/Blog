@@ -27,6 +27,6 @@ convert -size 1200x630 xc:white \
     $(for i in $(seq -- 220 270 1200); do echo "( $1 -resize 32x32 -rotate 6185 ) -geometry +${i}+520 -channel A -evaluate multiply 0.1 +channel -composite "; done) \
     $(for i in $(seq -- 310 290 1200); do echo "( $1 -resize 32x32 -rotate 984 ) -geometry +${i}+550 -channel A -evaluate multiply 0.1 +channel -composite "; done) \
     $(for i in $(seq -- 20 330 1200); do echo "( $1 -resize 32x32 -rotate 8946 ) -geometry +${i}+590 -channel A -evaluate multiply 0.1 +channel -composite "; done) \
-    \( ./assets/logomax.png -resize 96x96 \) -geometry +16+16 -composite \
+    \( ./assets/logomax.png -resize 96x96 \) -geometry +32+32 -composite \
     -fill "#4682B4" -draw "rectangle 0,614 1200,630" \
     "$2"
