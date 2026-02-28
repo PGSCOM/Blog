@@ -39,6 +39,11 @@ jobs:
           submodules: true  # Obtiene los submódulos (por ejemplo, temas de Hugo)
           fetch-depth: 0    # Obtiene todo el historial de Git
 
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
       - name: Generate OpenGraph Background
         run: |
           chmod +x ./generate_opengraph_bg.sh
