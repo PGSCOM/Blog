@@ -2,7 +2,7 @@
 title: 'Máquinas virtuales en iPad'
 date: '2026-02-27T10:02:32.298Z'
 description: 'Instalación de Linux en un iPad pro M5'
-draft: true
+draft: false
 tags:
     - 'iPad'
     - 'VMs'
