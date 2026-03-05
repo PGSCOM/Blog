@@ -1,13 +1,13 @@
 ---
-title: 'Pros y contras de la raspberry pi 4'
+title: Pros y contras de la raspberry pi 4
 date: 2020-02-16T07:49:00.001-08:00
 draft: false
 url: /2020/02/pros-y-contras-de-la-raspberry-pi-4.html
-tags: 
-- Raspberrie pi 4
+tags:
+  - RPI4
 ---
 
-Raspberrie pi 4 es un mini ordenador y su sistema operativo es raspbian, más info al final de la entrada  
+Raspberry pi 4 es un mini ordenador y su sistema operativo es raspbian, más info al final de la entrada  
 
 Pros:
 -----
@@ -25,7 +25,7 @@ Contras:
 --------
 
 *   Se calienta mucho y necesitas unos ventiladores que no vienen en la caja
-*   Para alimentar la raspberrie pi necesitas un cable USB-C que no viene en la caja.
+*   Para alimentar la Raspberry pi necesitas un cable USB-C que no viene en la caja.
 *   No es muy famoso el sistema operativo por lo que no tiene casi aplicaciónes que podamos instalar en un windows 10
 
 Información:
