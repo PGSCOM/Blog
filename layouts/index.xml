@@ -23,7 +23,7 @@
     {{ if .Site.Params.footer.showCopyright | default true -}}
     <copyright>{{ with replace .Site.Params.copyright "{ year }" now.Year }}{{.}}{{ else }}© {{ now.Format "2006" }} {{ .Site.Params.Author.name }}{{- end }}</copyright>
     {{- end }}
-    {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ if not .Date.IsZero }}<lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
     {{- with .OutputFormats.Get "RSS" -}}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
@@ -41,7 +41,7 @@
       {{ with .Site.Params.Author.email }}<author>{{.}}{{ with $.Site.Params.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       {{/* Usar .Summary para la descripción es lo habitual y evita problemas */}}
-      <description>{{ .Summary | plainify | html }}</description>
+      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
       {{/* Usar .RawContent | markdownify para renderizar sin los hooks del tema */}}
       <content:encoded>{{ .RawContent | markdownify | html }}</content:encoded>
       {{ range ( where .Site.RegularPages ".RelPermalink" .RelPermalink | first 1 ) }}
@@ -50,7 +50,7 @@
         {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
         {{- with $featured -}}
         {{/* Asegúrate de que la namespace media esté definida si usas esta etiqueta */}}
-        {{/* <media:content xmlns:media="http://search.yahoo.com/mrss/" url="{{ $featured.Permalink  }}" /> */}}
+        <media:content xmlns:media="http://search.yahoo.com/mrss/" url="{{ $featured.Permalink  }}" />
         {{- end -}}
       {{ end }}
     </item>
