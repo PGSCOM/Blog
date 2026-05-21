@@ -2,7 +2,9 @@
 title: Pros y contras de la raspberry pi 4
 date: 2020-02-16T07:49:00.001-08:00
 draft: false
-url: /2020/02/pros-y-contras-de-la-raspberry-pi-4.html
+url: /2020/02/pros-y-contras-de-la-raspberry-pi-4
+aliases:
+  - /2020/02/pros-y-contras-de-la-raspberry-pi-4.html
 tags:
   - RPI4
 ---

@@ -2,7 +2,9 @@
 title: 'Como instalar mods en minecraft (Forge)'
 date: 2021-05-01T04:53:00.000-07:00
 draft: false
-url: /2021/05/como-instalar-mods-en-minecraft-forge.html
+url: /2021/05/como-instalar-mods-en-minecraft-forge
+aliases:
+  - /2021/05/como-instalar-mods-en-minecraft-forge.html
 tags: 
 - Java
 - Tutoriales

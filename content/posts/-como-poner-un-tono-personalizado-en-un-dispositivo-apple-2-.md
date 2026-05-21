@@ -2,7 +2,9 @@
 title: '¿Como poner un tono personalizado en un dispositivo Apple? (2º parte)'
 date: 2020-03-01T04:44:00.000-08:00
 draft: false
-url: /2020/03/como-poner-un-tono-personalizado-en-un.html
+url: /2020/03/como-poner-un-tono-personalizado-en-un
+aliases:
+  - /2020/03/como-poner-un-tono-personalizado-en-un.html
 tags: 
 - Apple
 ---

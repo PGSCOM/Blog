@@ -2,7 +2,9 @@
 title: 'Como convertir un móvil a unas gafas de realidad virtual en el ordenador'
 date: 2021-09-05T05:00:00.001-07:00
 draft: false
-url: /2021/09/como-convertir-un-movil-unas-gafas-de.html
+url: /2021/09/como-convertir-un-movil-unas-gafas-de
+aliases:
+  - /2021/09/como-convertir-un-movil-unas-gafas-de.html
 ---
 
  Hola soy PGSCOM y hoy te voy a explicar como puedes utilizar tu movil como unas gafas de realidad virtual

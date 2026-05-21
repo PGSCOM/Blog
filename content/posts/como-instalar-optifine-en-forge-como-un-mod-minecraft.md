@@ -2,7 +2,9 @@
 title: 'Como instalar Optifine en Forge como un mod | Minecraft'
 date: 2021-05-01T04:50:00.002-07:00
 draft: false
-url: /2021/05/como-instalar-optifine-en-forge-como-un.html
+url: /2021/05/como-instalar-optifine-en-forge-como-un
+aliases:
+  - /2021/05/como-instalar-optifine-en-forge-como-un.html
 tags: 
 - Java
 - Tutoriales

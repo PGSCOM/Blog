@@ -2,7 +2,9 @@
 title: Que es un servidor DNS y porque los servidores de Facebook no funcionan
 date: 2021-10-07T14:30:00.000-07:00
 draft: false
-url: /2021/10/que-es-un-servidor-dns-y-porque-los.html
+url: /2021/10/que-es-un-servidor-dns-y-porque-los
+aliases:
+  - /2021/10/que-es-un-servidor-dns-y-porque-los.html
 tags:
   - Whatsapp
   - Facebook

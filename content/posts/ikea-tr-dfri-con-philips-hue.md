@@ -2,7 +2,9 @@
 title: 'Ikea Trådfri con Philips Hue'
 date: 2020-03-20T15:55:00.000-07:00
 draft: false
-url: /2020/03/ikea-tradfri-con-philips-hue.html
+url: /2020/03/ikea-tradfri-con-philips-hue
+aliases:
+  - /2020/03/ikea-tradfri-con-philips-hue.html
 tags: 
 - Philips Hue
 - Ikea Trådfri (Luces inteligentes Ikea)

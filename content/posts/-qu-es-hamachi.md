@@ -2,7 +2,9 @@
 title: '¿Qué es Hamachi?'
 date: 2023-06-24T08:36:00.002-07:00
 draft: false
-url: /2023/06/que-es-hamachi.html
+url: /2023/06/que-es-hamachi
+aliases:
+  - /2023/06/que-es-hamachi.html
 ---
 
 Hey! Llevaba mucho tiempo sin escribir. Hoy os voy a hablar de Hamachi, muchos lo recordareis por el tipico [video de Mikecrack](https://www.youtube.com/watch?v=ByBX8p3aGHA) de como jugar con tu amigo a Minecraft sin necesidad de un servidor.  

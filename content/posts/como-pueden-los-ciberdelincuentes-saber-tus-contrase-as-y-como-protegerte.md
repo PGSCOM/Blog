@@ -2,7 +2,9 @@
 title: 'Como pueden los ciberdelincuentes saber tus contraseñas y como protegerte'
 date: 2024-08-02T04:40:00.000-07:00
 draft: false
-url: /2024/08/como-pueden-los-ciberdelincuentes-saber.html
+url: /2024/08/como-pueden-los-ciberdelincuentes-saber
+aliases:
+  - /2024/08/como-pueden-los-ciberdelincuentes-saber.html
 tags: 
 - Phishing
 - Ciberseguridad

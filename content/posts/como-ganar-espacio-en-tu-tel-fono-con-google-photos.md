@@ -2,7 +2,9 @@
 title: 'Como ganar espacio en tu teléfono con Google photos'
 date: 2020-09-17T08:45:00.000-07:00
 draft: false
-url: /2020/09/como-ganar-espacio-en-tu-telefono-con.html
+url: /2020/09/como-ganar-espacio-en-tu-telefono-con
+aliases:
+  - /2020/09/como-ganar-espacio-en-tu-telefono-con.html
 tags: 
 - Google Fotos
 - Google

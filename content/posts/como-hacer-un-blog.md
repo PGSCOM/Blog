@@ -2,7 +2,9 @@
 title: 'Como hacer un blog'
 date: 2020-09-22T09:27:00.000-07:00
 draft: false
-url: /2020/09/como-hacer-un-blog.html
+url: /2020/09/como-hacer-un-blog
+aliases:
+  - /2020/09/como-hacer-un-blog.html
 tags: 
 - Blogger
 - Google

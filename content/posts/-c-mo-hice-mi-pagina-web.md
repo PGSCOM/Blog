@@ -2,7 +2,9 @@
 title: '¿Cómo hice mi pagina web?'
 date: 2020-09-25T12:25:00.000-07:00
 draft: false
-url: /2020/09/como-hice-mi-pagina-web.html
+url: /2020/09/como-hice-mi-pagina-web
+aliases:
+  - /2020/09/como-hice-mi-pagina-web.html
 tags: 
 - html
 - php

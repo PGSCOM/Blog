@@ -2,7 +2,9 @@
 title: 'Cómo instalar Audacity'
 date: 2021-09-21T06:54:00.001-07:00
 draft: false
-url: /2021/09/como-instalar-audacity.html
+url: /2021/09/como-instalar-audacity
+aliases:
+  - /2021/09/como-instalar-audacity.html
 ---
 
 Hola soy PGSCOM y hoy os voy a enseñar como instalar audacity. 

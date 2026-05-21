@@ -2,7 +2,9 @@
 title: 'Poner una canción en el tono de llamada en un IPhone'
 date: 2020-01-30T11:26:00.000-08:00
 draft: false
-url: /2020/01/poner-una-cancion-en-el-tono-de-llamada.html
+url: /2020/01/poner-una-cancion-en-el-tono-de-llamada
+aliases:
+  - /2020/01/poner-una-cancion-en-el-tono-de-llamada.html
 tags: 
 - Apple
 ---

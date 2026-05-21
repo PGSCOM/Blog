@@ -2,7 +2,9 @@
 title: 'Google Home con Philips Hue'
 date: 2020-05-09T03:23:00.001-07:00
 draft: false
-url: /2020/04/google-home-con-philips-hue.html
+url: /2020/04/google-home-con-philips-hue
+aliases:
+  - /2020/04/google-home-con-philips-hue.html
 tags: 
 - Philips Hue
 - Google Home

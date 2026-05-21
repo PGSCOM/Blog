@@ -2,7 +2,9 @@
 title: 'Como instalar Java '
 date: 2021-05-01T04:50:00.004-07:00
 draft: false
-url: /2021/05/como-instalar-java.html
+url: /2021/05/como-instalar-java
+aliases:
+  - /2021/05/como-instalar-java.html
 tags: 
 - Java
 - Tutoriales

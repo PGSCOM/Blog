@@ -2,7 +2,9 @@
 title: 'Como instalar un mundo de Minecraft'
 date: 2021-05-01T04:51:00.000-07:00
 draft: false
-url: /2021/05/como-instalar-un-mundo-de-minecraft.html
+url: /2021/05/como-instalar-un-mundo-de-minecraft
+aliases:
+  - /2021/05/como-instalar-un-mundo-de-minecraft.html
 tags: 
 - Java
 - Tutoriales

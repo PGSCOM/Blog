@@ -2,7 +2,9 @@
 title: '¿Cómo instalar Teams?'
 date: 2020-03-14T05:39:00.000-07:00
 draft: false
-url: /2020/03/como-instalar-teams.html
+url: /2020/03/como-instalar-teams
+aliases:
+  - /2020/03/como-instalar-teams.html
 tags: 
 - Microsoft
 ---

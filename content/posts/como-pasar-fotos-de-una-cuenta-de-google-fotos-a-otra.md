@@ -2,7 +2,9 @@
 title: 'Como pasar fotos de una cuenta de Google fotos a otra'
 date: 2020-05-29T12:19:00.000-07:00
 draft: false
-url: /2020/05/como-pasar-fotos-de-una-cuenta-de.html
+url: /2020/05/como-pasar-fotos-de-una-cuenta-de
+aliases:
+  - /2020/05/como-pasar-fotos-de-una-cuenta-de.html
 tags: 
 - Google Fotos
 - Google
