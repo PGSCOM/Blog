@@ -5,6 +5,7 @@
 theme = "blowfish" # UNCOMMENT THIS LINE
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "es"
+timeZone = "Europe/Madrid"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
@@ -31,7 +32,7 @@ enableEmoji = true
   series = "series"
 
 [sitemap]
-  changefreq = 'daily'
+  changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
 
